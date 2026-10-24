@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apk-blueprint-analyzer"
+version = "0.1.0"
+description = "Understand Android apps through safe static analysis"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "APK Blueprint Analyzer Contributors"},
+]
+keywords = [
+    "android",
+    "apk",
+    "static-analysis",
+    "security",
+    "mobile",
+    "reverse-engineering",
+    "blueprint",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "click>=8.1.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.scripts]
+apk-blueprint = "apk_blueprint_analyzer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/your-username/apk-blueprint-analyzer"
+Documentation = "https://github.com/your-username/apk-blueprint-analyzer/tree/main/docs"
+Repository = "https://github.com/your-username/apk-blueprint-analyzer"
+Issues = "https://github.com/your-username/apk-blueprint-analyzer/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.flake8]
+max-line-length = 99
+exclude = [".venv", "build", "dist"]
