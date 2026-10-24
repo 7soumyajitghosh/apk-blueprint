@@ -52,10 +52,10 @@ dev = [
 apk-blueprint = "apk_blueprint_analyzer.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/your-username/apk-blueprint-analyzer"
-Documentation = "https://github.com/your-username/apk-blueprint-analyzer/tree/main/docs"
-Repository = "https://github.com/your-username/apk-blueprint-analyzer"
-Issues = "https://github.com/your-username/apk-blueprint-analyzer/issues"
+Homepage = "https://github.com/error/apk-blueprint"
+Documentation = "https://github.com/error/apk-blueprint/tree/main/docs"
+Repository = "https://github.com/error/apk-blueprint"
+Issues = "https://github.com/error/apk-blueprint/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
